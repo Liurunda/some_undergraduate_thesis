@@ -14,3 +14,20 @@ WebRTC（主要解决传输？）
 nodejs/react?(主要解决搭网站框架？）
 
 你已经会写了，开始爆肝吧！（？？？）
+
+https://blog.csdn.net/zego_0616/article/details/117997726
+
+从 Windows 8 开始，微软引入了一套新技术叫 Desktop Duplication API，应用程序可以通过这套 API 请求桌面的图形数据。由于 Desktop Duplication API 是通过 DirectX Graphics Infrastructure（以下简称 DXGI）来提供桌面图像的，竞争的是 GPU 流水线资源，所以 CPU 占用率很低，采集性能非常高。
+
+由于这套能力整合在 DirextX 中提供，所以与大部分 DirectX 接口的使用方式基本一致，其流程概括如下图。
+
+todo: 学习DirectX中的windows桌面图像获取API？仅用于抓取全屏
+
+use windows desktop duplication API(https://docs.microsoft.com/en-us/windows/win32/direct3ddxgi/desktop-dup-api)
+Windows 8 disables standard Windows 2000 Display Driver Model (XDDM) mirror drivers and offers the desktop duplication API instead. The desktop duplication API provides remote access to a desktop image for collaboration scenarios. Apps can use the desktop duplication API to access frame-by-frame updates to the desktop. Because apps receive updates to the desktop image in a DXGI surface, the apps can use the full power of the GPU to process the image updates.
+
+DXGI provides a surface that contains a current desktop image through the new IDXGIOutputDuplication::AcquireNextFrame method. The format of the desktop image is always DXGI_FORMAT_B8G8R8A8_UNORM no matter what the current display mode is. Along with this surface, these IDXGIOutputDuplication methods return the indicated types of info that help you determine which pixels within the surface you need to process:
+
+
+
+
