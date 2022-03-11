@@ -29,5 +29,7 @@ Windows 8 disables standard Windows 2000 Display Driver Model (XDDM) mirror driv
 DXGI provides a surface that contains a current desktop image through the new IDXGIOutputDuplication::AcquireNextFrame method. The format of the desktop image is always DXGI_FORMAT_B8G8R8A8_UNORM no matter what the current display mode is. Along with this surface, these IDXGIOutputDuplication methods return the indicated types of info that help you determine which pixels within the surface you need to process:
 
 
+todo：学习WebRTC API，了解如何将desktop dup api得到的每秒若干帧的图像流需要用什么格式转发到WebRTC的输入端
+todo：搭建WebRTC demo，了解如何将这台机器上webRTC输入端的画面转发到另一台机器；搭建局域网测试环境
 
 
